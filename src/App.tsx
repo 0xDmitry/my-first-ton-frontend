@@ -1,4 +1,4 @@
-import { fromNano } from "@ton/core";
+import { fromNano } from "ton-core";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { useMainContract } from "./hooks/useMainContract";
 import { useTonConnect } from "./hooks/useTonConnect";

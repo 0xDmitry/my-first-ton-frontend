@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { Address, OpenedContract, toNano } from "@ton/core";
+import { Address, OpenedContract, toNano } from "ton-core";
 import { MainContract } from "../contracts/MainContract";
 import { useTonClient } from "./useTonClient";
 import { useAsyncInitialize } from "./useAsyncInitialize";
 import { useTonConnect } from "./useTonConnect";
-import { Contract } from "ton";
 
 export function useMainContract() {
   const client = useTonClient();
@@ -22,7 +21,7 @@ export function useMainContract() {
     const contract = new MainContract(
       Address.parse("EQAIx0wvh_GQCZNYspzUh7AiRM9MT-f5n7z0Ow2-D2OW5T2b")
     );
-    return client.open(contract as Contract) as OpenedContract<MainContract>;
+    return client.open(contract) as OpenedContract<MainContract>;
   }, [client]);
 
   const sleep = (time: number) => new Promise((resolve) => setTimeout(resolve, time));
