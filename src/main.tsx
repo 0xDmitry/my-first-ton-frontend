@@ -6,7 +6,7 @@ import App from './App';
 
 import './index.css';
 
-const manifestUrl = 'https://0xdmitry.github.io/first_contract_front_end/public/tonconnect-manifest.json';
+const manifestUrl = 'https://0xdmitry.github.io/my-first-ton-frontend/public/tonconnect-manifest.json';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
